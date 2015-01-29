@@ -1,9 +1,8 @@
-require 'pry'
 require 'sinatra'
 require_relative './model/collection'
 
 get '/' do
-  erb :index
+  erb :home
 end
 
 # get '/about' do
@@ -29,5 +28,3 @@ get '/recipes/:id' do
   @recipe = Collection.find(params[:id].to_i)
   erb :recipe
 end
-
-# binding.pry

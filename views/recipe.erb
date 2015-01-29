@@ -17,7 +17,19 @@
 </li>
 <% end %>  
 </ul>
-<%= @recipe.cooking_time %>
-<%= @recipe.source %>
-<%= @recipe.category %>
+
+<% unless @recipe.cooking_time == nil %>
+<h3>Cooking Time</h3>
+<ul>
+  <li><%= @recipe.cooking_time %></li>
+<ul>  
+<% end %>
+<h3>From the Kitchen of:</h3>
+<ul>
+<li><%= @recipe.source %></li>
+</ul>
+<h3>Category</h3>
+<ul>
+  <li><%= @recipe.category %></li>
+</ul>
 <%= @recipe.image %>

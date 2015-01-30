@@ -1,5 +1,4 @@
 require_relative './recipe'
-# require_relative './ingredient'
 
 class Collection
 
@@ -59,14 +58,13 @@ class Collection
   category: "Salads",
   )
   ]
-
   end
 
   def self.find(id)
-  all.find do |recipe|
-    recipe.id == id
-  end
-
+    all.find do |recipe|
+      recipe.id == id
+    end
   end
 
 end
+

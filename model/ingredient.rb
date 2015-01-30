@@ -1,9 +1,10 @@
 class Ingredient
-  attr_accessor :measurement, :measurement_unit, :ingredient
+  attr_accessor :recipe_id, :measurement, :measurement_unit, :ingredient
 
 # id?
 
   def initialize(args)
+    @recipe_id = args[:recipe_id]
     @measurement = args[:measurement]
     @measurement_unit = args[:measurement_unit]
     @ingredient = args[:ingredient] 

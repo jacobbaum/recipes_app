@@ -1,69 +1,37 @@
 require_relative './recipe'
 require_relative './ingredient'
+require_relative './source'
 
 class Collection
 
+  def self.sources
+    [
+    Source.new(id: 1, name: "Jeanette Oliphant", description: "My maternal grandmother.", image: nil),
+    Source.new(id: 2, name: "May Gibler", description: "Close friend of my maternal grandomother Jeanette Oliphant.", image: nil)
+    ]
+  end
+    
   def self.all
     [
     Recipe.new(
     id: 01,
     title: "Pineapple Cheese Salad",
     ingredients: [
-      Ingredient.new(
-        measurement: 1.0,
-        measurement_unit: "Package (3 ounce)",
-        ingredient: "Lemon Jello",
-        notes: nil
-      ),
-      Ingredient.new(
-        measurement: 1.75,
-        measurement_unit: "Cup",
-        ingredient: "Water",
-        notes: nil
-      ),
-      Ingredient.new(
-        measurement: 1.0,
-        measurement_unit: "Cup",
-        ingredient: "Shredded Cheese",
-        notes: nil
-      ),
-      Ingredient.new(  
-        measurement: 1.0,
-        measurement_unit: "tbsp (heaping)",
-        ingredient: "Mayonnaise",
-        notes: nil
-      ),
-      Ingredient.new(  
-      measurement: 1.0,
-      measurement_unit: "Cup",
-      ingredient: "Crushed Pineapple, drained",
-      notes: nil
-      ),
-      Ingredient.new(
-      measurement: 1.0,
-      measurement_unit: "Cup",
-      ingredient: "Miniature Marshmallows",
-      notes: nil
-      ),
-      Ingredient.new(
-      measurement: 1.0,
-      measurement_unit: "Cup",
-      ingredient: "Whipped Cream",
-      notes: nil
-      ),
-      Ingredient.new(
-      measurement: 0.5,
-      measurement_unit: "Cup",
-      ingredient: "Pecans, chopped",
-      notes: nil
-      )
+      Ingredient.new(measurement: 1.0, measurement_unit: "Package (3 ounce)", ingredient: "Lemon Jello", notes: nil),
+      Ingredient.new(measurement: 1.75, measurement_unit: "Cup", ingredient: "Water", notes: nil),
+      Ingredient.new(measurement: 1.0, measurement_unit: "Cup", ingredient: "Shredded Cheese", notes: nil),
+      Ingredient.new(measurement: 1.0, measurement_unit: "tbsp (heaping)", ingredient: "Mayonnaise", notes: nil),
+      Ingredient.new(measurement: 1.0, measurement_unit: "Cup", ingredient: "Crushed Pineapple, drained",notes: nil),
+      Ingredient.new(measurement: 1.0, measurement_unit: "Cup", ingredient: "Miniature Marshmallows",notes: nil),
+      Ingredient.new(measurement: 1.0, measurement_unit: "Cup", ingredient: "Whipped Cream", notes: nil),
+      Ingredient.new(measurement: 0.5, measurement_unit: "Cup", ingredient: "Pecans, chopped", notes: nil)
     ],
     directions: [
       "Dissolve together water and lemon jello. Place in refrigerator until almost set, then whip until foamy.",
       "Add remaining ingredients and refrigerate."
     ],
     cooking_time: nil,
-    source: "May Gibler",
+    source: self.sources[1],
     category: "Salads",
     notes: nil,
     image: nil,
@@ -80,10 +48,10 @@ Recipe.new(
     Ingredient.new(recipe_id: 02, measurement:0.5, measurement_unit:"tsp", ingredient:"Salt", notes:nil),
     Ingredient.new(recipe_id: 02, measurement:2.0, measurement_unit:"tbsp", ingredient:"Sugar", notes:nil),
     Ingredient.new(recipe_id: 02, measurement:0.5, measurement_unit:"Cup", ingredient:"Shortening", notes: "Slightly less than 1/2 cup"),
-    Ingredient.new(recipe_id: 02, measurement:1.0, measurement_unit:nil, ingredient:"Egg", notes: "Unbeaten"),
+    Ingredient.new(recipe_id: 02, measurement:1.0, measurement_unit: nil, ingredient:"Egg", notes: "Unbeaten"),
     Ingredient.new(recipe_id: 02, measurement:0.66, measurement_unit:"Cup", ingredient:"Milk", notes:nil) ],
   cooking_time: nil, 
-  source: "Jeanette Oliphant", 
+  source: self.sources[0], 
   category: "Baked Goods", 
   notes: nil, 
   image: "southern-biscuits.jpg"),
@@ -104,7 +72,7 @@ Recipe.new(
     Ingredient.new(recipe_id: 03, measurement:1.0, measurement_unit:"tsp", ingredient:"Soda", notes:nil),
     Ingredient.new(recipe_id: 03, measurement:1.0, measurement_unit:"tsp", ingredient:"Vanilla", notes:nil) ],
   cooking_time: nil,
-  source:"Jeanette Oliphant", 
+  source: self.sources[0], 
   category: "Baked Goods", 
   notes:"Emma Larson. This is a special cake!!", 
   image:"mothers-chocolate-cake.jpg"),

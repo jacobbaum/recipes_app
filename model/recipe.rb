@@ -1,4 +1,5 @@
 require_relative './ingredient'
+require_relative './source'
 
 class Recipe
   attr_accessor :id, :title, :directions, :ingredients, :cooking_time, :source, :category, :notes, :image
@@ -23,30 +24,3 @@ class Recipe
 end
 
 #adding alt ingredients?  see 'whipped cream' in pineapple salad
-
-
-# id: 02,
-# title: 
-# directions: 
-# ingredients:
- 
-#   measurement:
-#   measurement_unit:
-#   ingredient:
-
-# cooking_time:
-# source:
-# category:
-
-# id: 03,
-# title:
-# directions: 
-# ingredients:
- 
-#   measurement:
-#   measurement_unit:
-#   ingredient:
-
-# cooking_time:
-# source:
-# category:

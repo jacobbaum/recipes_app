@@ -34,6 +34,7 @@ end
 get '/sources' do
   @active = 'source'
   @recipes = Collection.all
+  @sources = Collection.sources
   erb :sources
 end  
 

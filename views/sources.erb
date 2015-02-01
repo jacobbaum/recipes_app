@@ -1,0 +1,10 @@
+<% sources = @recipes.map { |recipe| recipe.source }.uniq %>
+<% sources.each do |source| %>
+  <h2><%= source %></h2>
+  <% list = Collection.all.select { |recipe| recipe.source==source } %>
+  <ul>
+  <% list.collect do |recipe| %>
+    <li><a href="recipes/<%= recipe.id %>"><%= recipe.title  %></a></li>
+  <% end %> 
+  </ul> 
+<% end %>

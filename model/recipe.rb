@@ -1,9 +1,9 @@
 require_relative './ingredient'
 
 class Recipe
-  attr_accessor :id, :title, :directions, :ingredients, :cooking_time, :source, :category, :image
+  attr_accessor :id, :title, :directions, :ingredients, :cooking_time, :source, :category, :notes, :image
 
-  # Number of servongs?
+  # Number of servings?
   def initialize(args)
     @id = args[:id]
     @title = args[:title]
@@ -12,6 +12,7 @@ class Recipe
     @cooking_time = args[:cooking_time] #mandatory, but, won't always apply... approx time?
     @source = args[:source]
     @category = args[:category]
+    @notes = args[:notes]
     @image = args[:image]
   end
 

@@ -20,8 +20,21 @@ end
 # end
 
 get '/recipes' do
+  @active = 'alpha'
   @recipes = Collection.all
   erb :recipes
+end  
+
+get '/categories' do
+  @active = 'category'
+  @recipes = Collection.all
+  erb :categories
+end
+
+get '/sources' do
+  @active = 'source'
+  @recipes = Collection.all
+  erb :sources
 end  
 
 get '/recipes/:id' do

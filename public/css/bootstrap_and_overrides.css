@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Mono|Anonymous+Pro:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Slabo|Lora|Rokkitt|Slabo+13px);
+
+/*font-family: 'PT Mono', ;
+font-family: 'Anonymous Pro', ;*/
+body {
+  font-size: 16px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid;
+  margin-bottom: 18px;
+}
+
+.right-justified {
+  text-align: right;
+}
+
+.padding-correction {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.recipe-source {
+  margin-bottom: 18px;
+}
+
+.recipe-title {
+  padding-right: 18px;
+  font-family: Slabo, monospace;
+  text-align: right;
+}
+
+.recipe-heading {
+  font-family: Slabo, monospace;
+  text-align: right;
+}
+
+.recipe-text {
+  font-family: Slabo, monospace;
+}
+
+h1, h2, h3, h4 {
+  /*font-family: 'Anonymous Pro', monospace;*/
+}
+
+h2 {
+  font-size: 1.3em;
+  line-height: 1.3em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+h3 {
+  font-size: 1em; 
+  line-height: 1.2em;
+  font-style: italic;
+  /*font-weight: bold;*/
+  margin-top: 0;
+}
+
+ul {
+  font-family: Slabo, monospace;
+  font-size: 1em;
+  list-style: none;
+  padding: 0;
+  line-height: 1.2em;
+}
+
+.container {
+  border: 1px solid;
+  border-radius: 4px;
+}
+div {
+/*border: 1px solid;*/
+}

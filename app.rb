@@ -49,3 +49,8 @@ get '/recipes/:id' do
   @recipe = Collection.find(params[:id].to_i)
   erb :recipe
 end
+
+get '/sources/:id' do
+  @source = Collection.find_source(params[:id].to_i)
+  erb :person
+end  

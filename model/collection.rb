@@ -86,6 +86,13 @@ Recipe.new(
     end
   end
 
+  def self.find_source(id)
+    sources.find do |source|
+      source.id == id
+    end  
+  end
+
+
   # def self.list_categories
   #   categories = all.map { |recipe| recipe.category }.uniq
   #   categories.each do |category|

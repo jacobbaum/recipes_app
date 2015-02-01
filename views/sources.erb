@@ -3,7 +3,7 @@
   <% list = @recipes.select { |recipe| recipe.source.id==source.id } %>
   <ul>
   <% list.collect do |recipe| %>
-    <li><a href="recipes/<%= recipe.id %>"><%= recipe.title  %></a></li>
+    <li><a href="/recipes/<%= recipe.id %>"><%= recipe.title  %></a></li>
   <% end %> 
   </ul> 
 <% end %>

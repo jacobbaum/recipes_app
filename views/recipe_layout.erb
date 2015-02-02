@@ -45,14 +45,11 @@
         <li <%= 'class="active"' if @active == 'category' %>><a href="/recipes/by-category">by Category</a></li>
         <li <%= 'class="active"' if @active == 'source' %>><a href="/recipes/by-source">by Source</a></li>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" name="search" value="<%= @search %>" class="form-control input-sm" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-sm btn-default">Submit</button>
-<!--   <button type="reset" class="btn btn-warning"
-          onclick="window.location.href='/items'">Reset</button> -->
-      </form>
+        <div class="back navbar-right">
+        <button type="button"
+                class="btn btn-default"
+                onclick="window.history.back()">Back</button>
+      </div>
     </div><!--/.nav-collapse -->
   </div><!--/.container-fluid -->
 </nav>

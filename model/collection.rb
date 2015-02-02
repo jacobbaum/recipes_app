@@ -92,6 +92,20 @@ Recipe.new(
     end  
   end
 
+  def self.search(pattern)
+    all.select do |recipe|
+      recipe.category.downcase.include?(pattern.downcase) ||
+      recipe.title.downcase.include?(pattern.downcase) ||
+      recipe.source.name.downcase.include?(pattern.downcase)
+      # recipe.ingredients.collect do |ingredient| 
+      #   ingredient.ingredient.downcase.include?(pattern.downcase) 
+      # end    ||
+      # recipe.directions.each do |direction|
+      #   direction.downcase.include?(pattern.downcase)
+      # end 
+    end
+  end
+
 
   # def self.list_categories
   #   categories = all.map { |recipe| recipe.category }.uniq

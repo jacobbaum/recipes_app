@@ -4,7 +4,13 @@
 /*font-family: 'PT Mono', ;
 font-family: 'Anonymous Pro', ;*/
 body {
+  background-image: url("../images/tuna_casserole_3.jpg");
+  background-size: cover;
   font-size: 16px;
+}
+
+.container {
+  background-color: white;
 }
 
 .border-bottom {
@@ -12,9 +18,11 @@ body {
   margin-bottom: 18px;
 }
 
-.right-justified {
+
+
+/*.right-justified {
   text-align: right;
-}
+}*/
 
 .padding-correction {
   padding-left: 6px;
@@ -27,21 +35,26 @@ body {
 
 .recipe-title {
   padding-right: 18px;
-  font-family: Slabo, monospace;
+/*  font-family: Slabo, monospace;*/
   text-align: right;
 }
 
 .recipe-heading {
-  font-family: Slabo, monospace;
+/*  font-family: Slabo, monospace;*/
   text-align: right;
 }
 
 .recipe-text {
-  font-family: Slabo, monospace;
+/*  font-family: Slabo, monospace;*/
 }
 
 h1, h2, h3, h4 {
   /*font-family: 'Anonymous Pro', monospace;*/
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 12px;
 }
 
 h2 {
@@ -60,17 +73,35 @@ h3 {
 }
 
 ul {
-  font-family: Slabo, monospace;
+  /*font-family: Slabo, monospace;*/
   font-size: 1em;
   list-style: none;
   padding: 0;
   line-height: 1.2em;
+}
+.navbar {
+  min-height: 30px;
+}
+
+.navbar ul {
+  font-size: 1em;
+
+}
+
+.navbar ul li {
+  padding: 6px;
+  line-height: 1.4em;
+}
+.navbar ul li a {
+  padding: 0;
+  line-height: 1.4em;
 }
 
 .container {
   border: 1px solid;
   border-radius: 4px;
 }
+
 div {
-/*border: 1px solid;*/
+  /*border: 1px solid;*/
 }

@@ -1,24 +1,61 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Mono|Anonymous+Pro:400,400italic);
 @import url(http://fonts.googleapis.com/css?family=Slabo|Lora|Rokkitt|Slabo+13px);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,400);
 
 /*font-family: 'PT Mono', ;
 font-family: 'Anonymous Pro', ;*/
 body {
-  background-image: url("../images/tuna_casserole_3.jpg");
-  background-size: cover;
-  font-size: 16px;
+  background-image: url("../images/background.jpg");
+/*  background-size: cover;*/
+  background-repeat: no-repeat;
+  font-size: 14px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  }
+
+/*#EECE8B yellow
+#FEE09F light yellow
+#D87550 red 
+#B74834 rich red*/
+a {
+  color: #666666;
 }
 
 .container {
   background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: .9;
+}
+.home {
+  text-align: center;
+  margin-top:40px;
+}
+
+.home h1 {
+  font-size: 100px;
+  font-weight:bold;
+}
+
+.home h1 a {
+color: #FEF2D8;
+}
+
+.home h1 a:hover {
+  text-decoration: none;
+  color: #EECE8B;
+}
+
+.home p {
+  color: #FEF2D8;
+  font-size: 20px;
 }
 
 .border-bottom {
   border-bottom: 1px solid;
   margin-bottom: 18px;
 }
-
-
 
 /*.right-justified {
   text-align: right;
@@ -48,6 +85,9 @@ body {
 /*  font-family: Slabo, monospace;*/
 }
 
+.little-image {
+  width: 100%;
+}
 h1, h2, h3, h4 {
   /*font-family: 'Anonymous Pro', monospace;*/
 }
@@ -55,6 +95,12 @@ h1, h2, h3, h4 {
 h1 {
   margin-top: 10px;
   margin-bottom: 12px;
+}
+
+.site-title {
+  font-size: 22px;
+  font-style: italic;
+  margin-left:20px;
 }
 
 h2 {
@@ -66,7 +112,7 @@ h2 {
 
 h3 {
   font-size: 1em; 
-  line-height: 1.2em;
+  line-height: 1.4em;
   font-style: italic;
   /*font-weight: bold;*/
   margin-top: 0;
@@ -77,19 +123,21 @@ ul {
   font-size: 1em;
   list-style: none;
   padding: 0;
-  line-height: 1.2em;
+  line-height: 1.4em;
 }
 .navbar {
   min-height: 30px;
+  margin-top: 20px;
 }
 
 .navbar ul {
   font-size: 1em;
+  width: 100%;
 
 }
 
 .navbar ul li {
-  padding: 6px;
+  padding: 10px;
   line-height: 1.4em;
 }
 .navbar ul li a {
@@ -97,9 +145,20 @@ ul {
   line-height: 1.4em;
 }
 
+.navbar-default .navbar-nav>.active>a {
+  background-color: transparent;
+  border-bottom: 1px solid;
+}
+
 .container {
-  border: 1px solid;
+  /*border: 1px solid;*/
   border-radius: 4px;
+  padding-bottom: 10px;
+  margin-top:20px;
+}
+
+.right {
+  float: right;
 }
 
 div {

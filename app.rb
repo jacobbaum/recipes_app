@@ -2,7 +2,7 @@ require 'sinatra'
 require_relative './model/collection'
 
 get '/' do
-  erb :home
+  erb :home, :layout=> :home_layout
 end
 
 # get '/about' do
@@ -73,6 +73,11 @@ get '/recipes/by-source' do
   end
   @sources = Collection.sources
   erb :sources
+end  
+
+get '/about' do
+  @active = 'about'
+  erb :about, :layout=> :recipe_layout
 end  
 
 get '/recipes/:id' do

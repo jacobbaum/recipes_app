@@ -28,7 +28,7 @@ class Ingredient
   end
 
   def plural?
-    measurement > 1.0
+    measurement != nil && measurement > 1.0
   end
 
   def to_s
@@ -40,8 +40,8 @@ class Ingredient
       when measurement.to_s.include?(".66") then measurement.to_s.sub(".66", " 2/3")
       when measurement.to_s.include?(".75") then measurement.to_s.sub(".75", " 3/4") 
     end    
-    if formatted_measurement.start_with?("0") then formatted_measurement.delete!("0") end
-    formatted_measurement.lstrip!  
+    if formatted_measurement != nil && formatted_measurement.start_with?("0") then formatted_measurement.delete!("0") end
+    if formatted_measurement != nil then formatted_measurement.lstrip! end
     m_suffix = plural? && !@measurement_unit.nil? ? "s" : "" 
     i_suffix = plural? && @measurement_unit.nil? ? "s" : ""    
     "#{formatted_measurement} #{@measurement_unit}#{m_suffix} #{@ingredient}#{i_suffix}"

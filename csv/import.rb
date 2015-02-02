@@ -7,7 +7,7 @@ collection = RecipeCollection.new
 # print "Recipe file to import: "
 # csv_file = gets.chomp
 
-collection.import_recipes('./csv_files/recipes02.csv')    
+collection.import_recipes('./csv_files/recipes03.csv')    
 
 binding.pry
 
@@ -17,7 +17,7 @@ collection.format_recipes_for_export
 # print "Ingredient file to import: "
 # csv_file = gets.chomp
 
-collection.import_ingredients('./csv_files/ingredients02.csv')
+collection.import_ingredients('./csv_files/ingredients03.csv')
 collection.format_ingredients_for_export
 
 
